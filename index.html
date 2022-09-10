@@ -1,13 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="
-</head>
-<body>
-    
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Java Near Me</title>
+        <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+
+    <body>
+        <!-- HEADER START -->
+        <header class="header-title">
+            <h1>Java Near Me</h1>
+            <div>
+                <input type="text" class="location-search" placeholder="Enter Location">
+            </div>
+        </header>
+        <!-- HEADER END -->
+
+
+        <div class="container">
+            <!-- List of search results for coffeeshops in area -->
+
+            <section class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <h2>Here are the coffee shops in your area!</h2>
+                        <!-- RESULTS GO HERE -->
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card">
+                        <h2> Map </h2>
+                        <!-- MAP GOES HERE - GOOGLE MAPS API -->
+                    </div>
+                </div>
+            </section>
+            <section class="history">
+                <div class="col-7">
+                    <div class="card">
+                        <div class="history-info">
+                            <h2>Your Search History</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+
+
+    </body>
+
 </html>
