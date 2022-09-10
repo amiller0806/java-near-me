@@ -16,26 +16,32 @@
         <!-- HEADER START -->
         <header class="header-title">
             <h1>Java Near Me</h1>
-            <div>
-                <input type="text" class="location-search" placeholder="Enter Location">
-            </div>
+               <!--Create class for h1 to add css styling & add coffe image/sticker--> 
         </header>
         <!-- HEADER END -->
 
-
+        <section class="hero">
+            <!-- Add hero image for background in this section-->
+            <div class="hero-form">
+                <h3 class="hero-title">Need a Pick Me Up? Let's Find You a Coffee Shop!</h3>
+                <form>
+                    <input type="text" class="location-search" placeholder="Your Location">
+                <button class="search-button" id="fetch-button">Search</button>
+                </form>
+            </div>
+        </div>
         <div class="container">
             <!-- List of search results for coffeeshops in area -->
-
             <section class="row">
                 <div class="col-6">
                     <div class="card">
-                        <h2>Here are the coffee shops in your area!</h2>
+                        <h3>Here are the coffee shops in your area!</h3>
                         <!-- RESULTS GO HERE -->
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="card">
-                        <h2> Map </h2>
+                        <h3> Map </h3>
                         <!-- MAP GOES HERE - GOOGLE MAPS API -->
                     </div>
                 </div>
@@ -44,7 +50,7 @@
                 <div class="col-7">
                     <div class="card">
                         <div class="history-info">
-                            <h2>Your Search History</h2>
+                            <h3>Your Search History</h3>
                         </div>
                     </div>
                 </div>
