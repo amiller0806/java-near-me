@@ -1,0 +1,23 @@
+:root {
+    --primary: #e9bf64;
+    --secondary: #9caea9;
+    --tertiary: #788585;
+    --light-dark: #6f6866;
+    --dark: #0b0a0a;
+    --border-radius: .3rem;
+}
+body {
+    background-color: var(--primary);
+    margin: 0;
+    padding: 0;
+    color: var(--dark);
+    line-height: 1.5;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.header-title {
+    font-weight: bold;
+    background-image: url(./image/concert.jpeg);
+    padding-bottom: 10rem;
+    background-position: center;
+}
+
