@@ -16,8 +16,15 @@ body {
 }
 .header-title {
     font-weight: bold;
-    background-image: url(./image/concert.jpeg);
-    padding-bottom: 10rem;
+    background-image: url(./image/istockphoto-1194060639-612x612.jpeg);
+    padding-bottom: 4rem;
     background-position: center;
+}
+.search-button {
+    border: 1px solid;
+    padding: 5px;
+    color: #0b0a0a;
+    background-image: linear-gradient(rgb(90, 187, 226), rgb(190, 228, 236));
+    width: 100px;
 }
 
