@@ -1,6 +1,6 @@
 :root {
-    --primary: #e9bf64;
-    --secondary: #9caea9;
+    --primary: #c8e9f2;
+    --secondary: #7dcbd0;
     --tertiary: #788585;
     --light-dark: #6f6866;
     --dark: #0b0a0a;
@@ -27,4 +27,14 @@ body {
     background-image: linear-gradient(rgb(90, 187, 226), rgb(190, 228, 236));
     width: 100px;
 }
+.card .card-content {
+    width: 300px;
+}
+.hero {
+    float: left;
+}
+.col-6, .history{
+    text-align: center;
+}
+
 
