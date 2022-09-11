@@ -28,23 +28,41 @@ function getConcerts(event) {
         data._embedded.events[0]._embedded.venues[0].location.longitude
       );
       console.log(data._embedded.events[0].name);
+      console.log(data._embedded.events[0]._embedded.venues[0].name);
+      displayConcerts(data);
     });
 }
 
 // display concerts for city
 function displayConcerts(data) {
-  // for loop to call 10 concerts, and not all 20
   var concertContainer = document.querySelector(".concert-info");
-  var concertCard = document.createElement("div");
-  concertCard.setAttribute("class", "concert-card");
-  var concertItem = document.createElement("div");
-  concertItem.setAttribute("class", "concert-item");
-  var name = document.createElement("p");
-  name.setAttribute("class", "concertEl");
-  name.textContent = data._embedded.events[0].name;
-  concertItem.append(name);
-  concertCard.append(concertItem);
-  concertContainer.append(concertCard);
+  // for loop to call 10 concerts, and not all 20
+  for (let i = 0; i < 10; i++) {
+    var concertCard = document.createElement("div");
+    concertCard.setAttribute("class", "concert-card");
+    var concertItem = document.createElement("div");
+    concertItem.setAttribute("class", "concert-item");
+    var concertName = document.createElement("p");
+    concertName.setAttribute("class", "concertEl");
+    var venue = document.createElement("p");
+    venue.setAttribute("class", "concertEl");
+    var concertDate = document.createElement("p");
+    var concertImg = document.createElement("img");
+    concertImg.setAttribute(
+      "src",
+      "https://app.ticketmaster.com" +
+        data._embedded.events[i].images[0].url +
+        ".png"
+    );
+    console.log(concertImg);
+    concertDate.setAttribute("class", "concertEl");
+    concertName.textContent = `${data._embedded.events[i].name}`;
+    venue.textContent = `Venue: ${data._embedded.events[i]._embedded.venues[0].name}`;
+    concertDate.textContent = `Date: ${data._embedded.events[i].dates.start.localDate}`;
+    concertItem.append(concertName, venue, concertDate);
+    concertCard.append(concertItem);
+    concertContainer.append(concertCard);
+  }
 }
 // addEventListener activated when user clicks search button, will run the getConcerts function
 fetchButton.addEventListener("click", getConcerts);
