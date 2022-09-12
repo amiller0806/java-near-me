@@ -73,4 +73,12 @@ body {
     border: none;
 }
 
-
+/* Set the size of the div element that contains the map */
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 80%;
+    margin-left: 5%;
+    padding-left: 10%;
+    /* The width is the width of the web page */
+  }

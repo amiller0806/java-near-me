@@ -1,87 +1,43 @@
-// FOR GOOGLE MAPS API 
+//Global variables
+var lat;
+var lon;
 
-// FOR THE CALL:
-// <script
-//                         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVWPzGgLDuTd7W3azkDzNwO9Jckk348_4&callback=initMap&v=weekly"
-//       defer> 
-//     </script> 
+// Initialize and add the map
+function initMap(latValue, lonValue) {
+  // The location of Uluru
+  const uluru = { lat: latValue, lng: lonValue }; 
+  console.log(uluru)
 
-// fetch 
-
-
-
-// GET CURRENT LOCATION
-window.initMap = initMap;
-
-let map, infoWindow;
-
-function initGeolocation() {
-  map = new google.maps.Map(document.getElementById("map"), {
-
+  
+  // The map, centered at Uluru
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 4,
+    center: uluru,
   });
-  infoWindow = new google.maps.InfoWindow();
+  //The marker, positioned at Uluru
+  const marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+  });
 
+}
 
+window.initMap = initMap();
 
-async getConcertLocations{ commit } {
-  const res_concerts = await fetch(
-"https://app.ticketmaster.com/discovery/v2/events.json?segmentId=KZFzniwnSyZfZ7v7nJ&city=" +
-city +
-"&apikey=" +
-TmApiKey;
-
-
-  const { results } = await resConcertLocations.json();
-  commit('updatePlaces', results); 
-
-  // Fetch geolocation and display
-  const res_ConcertLocations = await fetch(
-https://maps.googleapis.com/maps/api/geocode/json?latlng=40.7128,74.0060&key=AIzaSyAVWPzGgLDuTd7W3azkDzNwO9Jckk348_4 
-
-  );
-  const { map } = await res_map.json();
-
-  const mapWithconcertlocations = results.map( ({map_ids, ...rest}) => ({...rest, map_ids: map_ids.map(id => map.find(map => map.id === id).name )}) )
-
-  console.log(mapWithconcertlocations);
-},
-
-
-
-//     // Try HTML5 geolocation.
-//     if (navigator.geolocation) {
-//       navigator.geolocation.getCurrentPosition(
-//         (position) => {
-//           const place = {
-//             lat: position.coords.latitude,
-//             lng: position.coords.longitude,
-        //   };
-
-//           infoWindow.setPosition(pos);
-//           infoWindow.setContent("Location found.");
-//           infoWindow.open(map);
-//           map.setCenter(pos);
-//         },
-//         () => {
-//           handleLocationError(true, infoWindow, map.getCenter());
-//         }
-//       );
-//     } else {
-//       // Browser doesn't support Geolocation
-//       handleLocationError(false, infoWindow, map.getCenter());
-//     }
+// Initialize and add the map
+// function initMap() {
+//   // The location of Uluru
+//   const uluru = { lat: -25.344, lng: 131.031 };
+//   // The map, centered at Uluru
+//   const map = new google.maps.Map(document.getElementById("map"), {
+//     zoom: 4,
+//     center: uluru,
+//   });
+//   // The marker, positioned at Uluru
+//   const marker = new google.maps.Marker({
+//     position: uluru,
+//     map: map,
 //   });
 // }
 
-// function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-//   infoWindow.setPosition(pos);
-//   infoWindow.setContent(
-//     browserHasGeolocation
-    //   ? "Error: The Geolocation service failed.
-//       : "Error: Your browser doesn't support geolocation."
-//   );
-//   infoWindow.open(map);
-// }
-
-// window.initMap = initMap;
-
+// // window.initMap = initMap;
