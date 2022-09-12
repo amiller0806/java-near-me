@@ -33,7 +33,8 @@ function getConcerts(event) {
       console.log(data._embedded.events[0]._embedded.venues[0].name);
       displayConcerts(data);
       
-      initMap(lat,lon);
+      initMap(lat,lon); 
+      displayConcerts(data);
     });
 }
 
