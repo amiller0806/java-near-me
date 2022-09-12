@@ -1,20 +1,76 @@
-/* 
- * Always set the map height explicitly to define the size of the div element
- * that contains the map. 
- /* From https://developers.google.com/maps/documentation/javascript/examples/map-simple#clone-sample */
- */
- #map {
-    height: 100%;
-  }
-  
-  /* 
-   * Optional: Makes the sample page fill the window. 
-   */
-  html,
-  body {
-    height: 100%;
+/*html and body styling start*/
+:root {
+    --primary: #c8e9f2;
+    --secondary: #a8e9ed;
+    --tertiary: #89afaf;
+    --light-dark: #6f6866;
+    --dark: #0b0a0a;
+    --border-radius: .3rem;
+}
+body {
+    background-color: var(--primary);
     margin: 0;
     padding: 0;
-  }
-  
-  
+    color: var(--dark);
+    line-height: 1.5;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/*html and body styling end*/
+
+/*header styling start*/
+.header-title {
+    font-weight: bold;
+    background-image: url(./image/istockphoto-1194060639-612x612.jpeg);
+    padding-bottom: 4rem;
+    background-position: center;
+}
+.center-align .text-uppercase {
+    top: 50%;
+}
+/*header styling endt*/
+
+/*enter location styling start*/
+    /*search button*/
+.search-button {
+    border: 1px solid;
+    padding: 5px;
+    color: #ffffff;
+    width: 150px;
+    background-image: url(./image/nyc-concerts.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40px;
+}
+.card .card-content {
+    width: 300px;
+    box-shadow: 5px 5px 5px #aaaaaa;
+}
+.hero {
+    float: left;
+    margin-left: 20px;
+}
+/*container styling starts*/
+    /*search history, map, and results*/
+.col-6, .history{
+    text-align: center;
+}
+/*search history styling*/
+.history{
+    border: 3px solid transparent;
+    float: left;
+    padding-bottom: 30%;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-right: 50%;
+    box-shadow: 5px 5px 5px #aaaaaa;
+    padding: 20px 20px 150px 20px;
+    width: 300px;
+    margin-top: 20px;
+}
+.col-8 {
+    width: auto;
+    border: none;
+}
+
+

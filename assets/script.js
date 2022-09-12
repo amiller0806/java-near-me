@@ -6,6 +6,8 @@
 //       defer> 
 //     </script> 
 
+// fetch 
+
 
 
 // GET CURRENT LOCATION
@@ -19,6 +21,30 @@ function initGeolocation() {
   });
   infoWindow = new google.maps.InfoWindow();
 
+
+
+async getConcertLocations{ commit } {
+  const res_concerts = await fetch(
+"https://app.ticketmaster.com/discovery/v2/events.json?segmentId=KZFzniwnSyZfZ7v7nJ&city=" +
+city +
+"&apikey=" +
+TmApiKey;
+
+
+  const { results } = await resConcertLocations.json();
+  commit('updatePlaces', results); 
+
+  // Fetch geolocation and display
+  const res_ConcertLocations = await fetch(
+https://maps.googleapis.com/maps/api/geocode/json?latlng=40.7128,74.0060&key=AIzaSyAVWPzGgLDuTd7W3azkDzNwO9Jckk348_4 
+
+  );
+  const { map } = await res_map.json();
+
+  const mapWithconcertlocations = results.map( ({map_ids, ...rest}) => ({...rest, map_ids: map_ids.map(id => map.find(map => map.id === id).name )}) )
+
+  console.log(mapWithconcertlocations);
+},
 
 
 
