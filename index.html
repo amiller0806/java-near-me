@@ -22,14 +22,21 @@
         </header>
         <!-- HEADER END -->
 
-        <section class="hero card">
+        <section class="hero">
             <!-- Add hero image for background in this section-->
-            <div class="hero-form card-content">
+            <div class="hero-form card-content card">
                 <h3 class="hero-title card-title">Let's Find You a Concert!</h3>
                 <form>
                     <input type="text" class="location-search" placeholder="Your Location">
                     <a class="search-button" id="fetch-button" type="submit" class="waves-effect waves-light btn"><i class="material-icons left">location_on</i>Search</a>
                 </form>
+            </div>
+            <div class="col-8 history">
+                <div class="card">
+                    <div class="history-info">
+                        <h3>Your Search History</h3>
+                    </div>
+                </div>
             </div>
         </section>
         <div class="container ">
@@ -47,16 +54,7 @@
                         <!-- MAP GOES HERE - GOOGLE MAPS API -->
                     </div>
                 </div>
-            </section>
-            <section class="history">
-                <div class="col-8">
-                    <div class="card">
-                        <div class="history-info">
-                            <h3>Your Search History</h3>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>

@@ -42,29 +42,30 @@ body {
     background-size: cover;
     height: 40px;
 }
-.card .card-content {
+.card-content {
     width: 300px;
     box-shadow: 5px 5px 5px #aaaaaa;
+    height: 150px;
+    padding: 10px;
 }
 .hero {
     float: left;
     margin-left: 20px;
+    
 }
 /*container styling starts*/
     /*search history, map, and results*/
 .col-6, .history{
     text-align: center;
+    padding: 10px;
 }
 /*search history styling*/
 .history{
     border: 3px solid transparent;
-    float: left;
     padding-bottom: 30%;
     background-color: #fff;
     border-radius: 10px;
-    margin-right: 50%;
     box-shadow: 5px 5px 5px #aaaaaa;
-    padding: 20px 20px 150px 20px;
     width: 300px;
     margin-top: 20px;
 }
