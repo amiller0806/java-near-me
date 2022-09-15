@@ -1,6 +1,8 @@
 var fetchButton = document.getElementById("fetch-button");
 var TmApiKey = "o6fBym3hSy1yQMvpswGVAbQ9Wha16tT8";
 
+
+
 // user types in location & getConcerts function is called when the fetchButton is clicked
 function getConcerts(event) {
   event.preventDefault();
@@ -31,11 +33,11 @@ function getConcerts(event) {
       console.log(data._embedded.events[0].name);
       console.log(data._embedded.events[0]._embedded.venues[0].name);
       displayConcerts(data);
-      
-  
+
+
       displayConcerts(data);
     });
-}
+  }
 
 // display concerts for city
 function displayConcerts(data) {
@@ -66,15 +68,20 @@ function displayConcerts(data) {
     concertCard.append(concertItem);
     concertContainer.append(concertCard);
 
-    var locationData =  {
-lat: data._embedded.events[i]._embedded.venues[0].location.latitude,
-lng: data._embedded.events[i]._embedded.venues[0].location.longitude,
-name: data._embedded.events[i]._embedded.venues[0].name,
+    var locationData = {
+      lat: data._embedded.events[i]._embedded.venues[0].location.latitude,
+      lng: data._embedded.events[i]._embedded.venues[0].location.longitude,
+      name: data._embedded.events[i]._embedded.venues[0].name,
     }
 
     coordinatesArr.push(locationData);
   }
-  initMap(coordinatesArr[0].lat,coordinatesArr[0].lng, coordinatesArr); 
+  initMap(coordinatesArr[0].lat, coordinatesArr[0].lng, coordinatesArr);
 }
+
+
+
+
 // addEventListener activated when user clicks search button, will run the getConcerts function
 fetchButton.addEventListener("click", getConcerts);
+

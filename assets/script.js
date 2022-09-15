@@ -31,7 +31,7 @@ function initMap(latValue, lonValue, locations) {
         map,
         title: locations[i].name,
       });
-    }
+    } 
   }
 
 
@@ -56,8 +56,8 @@ function initMap(latValue, lonValue, locations) {
             title: "My Location"
           });
 
-  map.setZoom(15);
-      
+          map.setZoom(15);
+
           map.setCenter(pos);
         },
         () => {
