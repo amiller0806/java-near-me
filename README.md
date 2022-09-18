@@ -2,7 +2,7 @@
 
 ---
 
-The goal of Project 1 was to work together with our group members to create an interactive real-world front-end web application. Click to access our group's project, Concert Catalog, [here]().
+The goal of Project 1 was to work together with our group members to create an interactive real-world front-end web application. Click to access our group's project, Concert Catalog, [here](https://amiller0806.github.io/java-near-me/?).
 
 ## Description
 
